@@ -16,6 +16,11 @@ public class Bird extends Animal {
 		return "[Bird] " + super.toString() + ", wingSpan = " + wingSpan;
 	}
 
+	@Override
+	public String getSound() {
+		return "[Bird] chirrrrr r~~~~~~~~ ing";
+	}
+
 	
 	
 	

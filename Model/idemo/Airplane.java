@@ -19,5 +19,10 @@ public String toString(){
 	return "[Airplane] " + super.toString() + " Capacity: " + capacity;
 }
 
+@Override
+public String getSound() {
+	return "[Airplane]  sonic B ooooooooooooo   ~~~~~~";
+}
+
 	
 }
