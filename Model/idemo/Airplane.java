@@ -16,7 +16,7 @@ public int getCapacity() {
 
 @Override
 public String toString(){
-	return "[Airplane] " + super.toString() + "Capacity: " + capacity;
+	return "[Airplane] " + super.toString() + " Capacity: " + capacity;
 }
 
 	

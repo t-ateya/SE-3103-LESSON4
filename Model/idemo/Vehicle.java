@@ -34,7 +34,7 @@ public abstract class Vehicle {
 	@Override
 	public String toString(){
 		return "Vehicle at (" + x + ", " + y + ")" +
-				make + " $" + price;
+				make + " $  " + price;
 	}
 
 }
