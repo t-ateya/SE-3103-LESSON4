@@ -31,6 +31,7 @@ public class MenuScreen {
 		cp.add(BorderLayout.CENTER, panel);
 
 		idemoButton.addActionListener(event ->{
+			window.getContentPane().removeAll();
 			var menu = new IDemoPanel(window);
 			menu.init();
 
