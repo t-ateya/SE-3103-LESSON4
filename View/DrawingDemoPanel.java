@@ -104,6 +104,8 @@ public class DrawingDemoPanel {
 		exitButton.addActionListener(listener);
 		showOrderButton.addActionListener(listener);
 		showAllButton.addActionListener(listener);
+		sortXButton.addActionListener(listener);
+		
 
 
 	}
