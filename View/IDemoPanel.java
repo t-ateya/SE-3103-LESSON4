@@ -4,6 +4,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import Controller.IDemoEventListener;
 import Model.Images.ImageStore;
 import Model.idemo.Airplane;
 import Model.idemo.Bird;
@@ -60,6 +61,10 @@ public class IDemoPanel {
 		pics.add(v4);
 		v4.setImage(ImageStore.dog);
 
+	}
+
+	public IDemoCanvas getCanvas() {
+		return canvas;
 	}
 
 }
