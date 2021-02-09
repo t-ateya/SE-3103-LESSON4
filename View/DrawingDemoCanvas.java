@@ -42,6 +42,13 @@ public class DrawingDemoCanvas extends JPanel {
 
 	}
 
+	public void incrementSingleStepIndex(){
+		if (shapes.size() == 0) return;
+		++singleStepIndex;
+		if (singleStepIndex == shapes.size()){
+			singleStepIndex = 0;
+		}
+	}
 	public ArrayList<IShapeDraw> getShapes() {
 		return shapes;
 	}
