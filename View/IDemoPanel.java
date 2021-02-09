@@ -46,8 +46,10 @@ public class IDemoPanel {
 		canvas.requestFocusInWindow();
 		canvas.setFocusable(true);
 
-		//SetFocusable config
+		// SetFocusable config
 		quitButton.setFocusable(false);
+
+		quitButton.addActionListener(listener);
 
 	}
 
@@ -67,6 +69,14 @@ public class IDemoPanel {
 		pics.add(v4);
 		v4.setImage(ImageStore.dog);
 
+	}
+
+	public JFrame getWindow() {
+		return window;
+	}
+
+	public JButton getQuitButton() {
+		return quitButton;
 	}
 
 	public IDemoCanvas getCanvas() {

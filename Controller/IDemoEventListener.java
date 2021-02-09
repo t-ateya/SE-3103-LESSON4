@@ -1,17 +1,23 @@
 package Controller;
 
 import View.IDemoPanel;
+import View.MenuScreen;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
+
+import javax.swing.JFrame;
+
 import java.awt.Rectangle;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import Model.idemo.IRender;
 
-public class IDemoEventListener implements MouseListener, KeyListener {
+public class IDemoEventListener implements MouseListener, KeyListener, ActionListener {
 	public static final int UNIT_MOVE = 5;
 	private IDemoPanel panel;
 
@@ -80,6 +86,19 @@ public class IDemoEventListener implements MouseListener, KeyListener {
 
 	@Override
 	public void keyReleased(KeyEvent e) {
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == panel.getQuitButton()) {
+			JFrame window = panel.getWindow();
+			window.getContentPane().removeAll();
+			var menu = new MenuScreen(window);
+			menu.init();
+			window.pack();
+			window.revalidate();
+		}
+
 	}
 
 }
