@@ -14,12 +14,12 @@ public class ImageStore {
 	public static BufferedImage bird;
 
 	static {
-		String cwd = System.getProperty("user.dir");
-		System.out.println("cwd: " + cwd + "\n");
-		airplane = readImage("airplane.jpg", 80, 60);
-		car = readImage("car.jpg", 70, 50);
-		dog = readImage("dog.jpg", 70, 50);
-		bird = readImage("bird.png", 70, 50);
+		//String cwd = System.getProperty("user.dir");
+		//System.out.println("cwd: " + cwd + "\n");
+		airplane = readImage("Model/Images/airplane.jpg", 80, 60);
+		car = readImage("Model/Images/car.jpg", 70, 50);
+		dog = readImage("Model/Images/dog.jpg", 70, 50);
+		bird = readImage("Model/Images/bird.png", 70, 50);
 	}
 
 	public static BufferedImage readImage(String path, int width, int height) {
