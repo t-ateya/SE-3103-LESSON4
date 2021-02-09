@@ -38,6 +38,13 @@ public class MenuScreen {
 			window.pack();
 			window.revalidate();
 		});
+		drawingButton.addActionListener(event->{
+			window.getContentPane().removeAll();
+			var menu = new DrawingDemoPanel(window);
+			menu.init();
+			window.pack();
+			window.revalidate();
+		});
 	}
 
 }
