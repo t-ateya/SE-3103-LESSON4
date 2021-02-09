@@ -44,9 +44,8 @@ public abstract class Vehicle implements ISound, IRender {
 	}
 
 	@Override
-	public String toString(){
-		return "Vehicle at (" + x + ", " + y + ")" +
-				make + " $  " + price;
+	public String toString() {
+		return "Vehicle at (" + x + ", " + y + ")" + make + " $  " + price;
 	}
 
 	@Override
@@ -54,4 +53,9 @@ public abstract class Vehicle implements ISound, IRender {
 		return new Rectangle(x, y, image.getWidth(), image.getHeight());
 	}
 
+	@Override
+	public void translate(int dx, int dy) {
+		x += dx;
+		y += dy;
+	}
 }

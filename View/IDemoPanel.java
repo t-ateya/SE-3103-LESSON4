@@ -42,6 +42,12 @@ public class IDemoPanel {
 
 		IDemoEventListener listener = new IDemoEventListener(this);
 		canvas.addMouseListener(listener);
+		canvas.addKeyListener(listener);
+		canvas.requestFocusInWindow();
+		canvas.setFocusable(true);
+
+		//SetFocusable config
+		quitButton.setFocusable(false);
 
 	}
 
