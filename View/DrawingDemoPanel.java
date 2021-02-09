@@ -100,6 +100,8 @@ public class DrawingDemoPanel {
 
 		ShapeDemoListener listener = new ShapeDemoListener(this);
 		canvas.addMouseListener(listener);
+		clearButton.addActionListener(listener);
+		exitButton.addActionListener(listener);
 
 
 	}

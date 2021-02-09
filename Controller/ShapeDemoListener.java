@@ -1,10 +1,15 @@
 package Controller;
 
 import View.DrawingDemoPanel;
+import View.MenuScreen;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+import javax.swing.JFrame;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import Model.shapes.Circle;
 import Model.shapes.IShapeDraw;
@@ -13,7 +18,7 @@ import Model.shapes.Triangle;
 
 import java.awt.Color;
 
-public class ShapeDemoListener implements MouseListener {
+public class ShapeDemoListener implements MouseListener, ActionListener {
 	public static final int SIZE_SMALL = 40;
 	public static final int SIZE_MID = 40;
 	public static final int SIZE_LARGE = 80;
@@ -84,6 +89,24 @@ public class ShapeDemoListener implements MouseListener {
 
 	@Override
 	public void mouseExited(MouseEvent e) {
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == panel.getClearButton()){
+			panel.getCanvas().getShapes().clear();
+			panel.getCanvas().repaint();
+		} else if (e.getSource() == panel.getExitButton()){
+			JFrame window = panel.getWindow();
+			window.getContentPane().removeAll();
+			var menu = new MenuScreen(window);
+			menu.init();
+			window.pack();
+			window.revalidate();
+		} else if (e.getSource() == panel.getShowOrderButton()){
+			
+		}
+
 	}
 
 }
