@@ -78,7 +78,6 @@ public class DrawingDemoPanel {
 		colorGroup.add(whiteColor);
 		colorGroup.add(yellowColor);
 		colorGroup.add(redColor);
-		colorGroup.add(filledBox);
 		whiteColor.setSelected(true);//default color
 
 		sizePanel.setBorder(BorderFactory.createTitledBorder("Size"));
@@ -103,6 +102,12 @@ public class DrawingDemoPanel {
 		canvas.addMouseListener(listener);
 
 
+	}
+	public JFrame getWindow() {
+		return window;
+	}
+	public DrawingDemoCanvas getCanvas() {
+		return canvas;
 	}
 
 	public JRadioButton getCirButton() {
