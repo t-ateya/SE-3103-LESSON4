@@ -1,4 +1,5 @@
 package View;
+import Controller.ShapeDemoListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
@@ -23,14 +24,14 @@ public class DrawingDemoPanel {
 	private JRadioButton yellowColor = new JRadioButton("yellow");
 	private JRadioButton redColor = new JRadioButton("red");
 
-	private JCheckBox filledBox = new JCheckBox("fill");
+	private JCheckBox filledBox = new JCheckBox("filled");
 	private JRadioButton smallSize = new JRadioButton("small");
 	private JRadioButton midSize = new JRadioButton("medium");
 	private JRadioButton largeSize = new JRadioButton("large");
 
 	private JButton sortXButton = new JButton("Sort by X");
 	private JButton sortYButton = new JButton("Sort by Y");
-	private JButton showAllButton = new JButton("Sort All");
+	private JButton showAllButton = new JButton("Show All");
 	private JButton showOrderButton = new JButton("Show order");
 	private JButton clearButton = new JButton("Clear");
 	private JButton exitButton = new JButton("Exit");
@@ -66,6 +67,7 @@ public class DrawingDemoPanel {
 		shapeGroup.add(cirButton);
 		shapeGroup.add(recButton);
 		shapeGroup.add(triButton);
+		cirButton.setSelected(true); //default shape
 
 		colorPanel.setBorder(BorderFactory.createTitledBorder("Color"));
 		colorPanel.add(whiteColor);
@@ -77,6 +79,7 @@ public class DrawingDemoPanel {
 		colorGroup.add(yellowColor);
 		colorGroup.add(redColor);
 		colorGroup.add(filledBox);
+		whiteColor.setSelected(true);//default color
 
 		sizePanel.setBorder(BorderFactory.createTitledBorder("Size"));
 		sizePanel.add(smallSize);
@@ -86,6 +89,7 @@ public class DrawingDemoPanel {
 		sizeGroup.add(smallSize);
 		sizeGroup.add(midSize);
 		sizeGroup.add(largeSize);
+		smallSize.setSelected(true);//default size
 
 		buttonPanel.setBorder(BorderFactory.createTitledBorder("Actions"));
 		buttonPanel.add(sortXButton);
@@ -94,6 +98,9 @@ public class DrawingDemoPanel {
 		buttonPanel.add(showOrderButton);
 		buttonPanel.add(clearButton);
 		buttonPanel.add(exitButton);
+
+		ShapeDemoListener listener = new ShapeDemoListener(this);
+		canvas.addMouseListener(listener);
 
 
 	}
