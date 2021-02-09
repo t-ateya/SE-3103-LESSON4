@@ -22,7 +22,7 @@ public class DrawingDemoCanvas extends JPanel {
 		setBackground(Color.black);
 		setPreferredSize(new Dimension(500, 400));
 
-		testRendering();
+		//testRendering();
 	}
 
 	@Override
